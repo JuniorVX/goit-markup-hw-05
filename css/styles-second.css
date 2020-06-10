@@ -33,20 +33,11 @@ body {
   tab-size: 4px;
   display: block;
 }
-div {
-  display: block;
-}
-section {
-  margin-left: auto;
-  margin-right: auto;
-}
-svg {
-  margin: auto;
-  border: none;
-}
 .icon {
   display: inline;
   fill: var(--description-text-color);
+  margin: auto;
+  border: none;
 }
 .container {
   display: flex;
@@ -66,13 +57,13 @@ svg {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 /* Navigation */
-header {
+.header {
   border-bottom: 1px solid #ececec;
 }
-header * {
+.header * {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav {
@@ -84,15 +75,22 @@ header * {
   margin-right: auto;
   width: 1200px;
 }
-.nav ul {
+.navigation-list {
   display: flex;
   align-items: center;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0px;
+  list-style: none;
 }
-.nav li {
-  display: block;
+.mail-list {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  list-style: none;
 }
 .main-link {
   font-family: Raleway;
@@ -159,7 +157,6 @@ header * {
   display: flex;
   align-items: flex-end;
 }
-
 .mail .icon {
   margin-right: 10px;
   fill: var(--description-text-color);
@@ -172,12 +169,8 @@ header * {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-
 .mail-item + .mail-item {
-  margin-left: 24px;
-}
-.mail-list {
-  margin-left: auto;
+  margin-left: 50px;
 }
 /* Navigation end */
 
@@ -193,7 +186,7 @@ header * {
   padding-top: 93px;
   padding-bottom: 50px;
 }
-.button-list > li:not(:first-child) {
+.button-list > .button-item:not(:first-child) {
   margin-left: 8px;
 }
 .button {
@@ -209,7 +202,7 @@ header * {
   border-radius: 4px;
   border: none;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transform: scaleX(110%);
+  cursor: pointer;
 }
 .button:focus,
 .button:hover {
@@ -271,16 +264,14 @@ header * {
 }
 .card-description {
   width: 370px;
-  padding: 20px 23px 19px 23px;
+  padding: 21px 23px 19px 23px;
   text-decoration: none;
   flex-direction: column;
   display: block;
   border-color: #eeeeee;
   border-style: solid;
   border-top: 0px;
-  border-left: 1;
-  border-right: 1;
-  border-bottom: 1;
+  border: 1px solid #eeeeee;
   margin-top: -1px;
 }
 .project-name {
@@ -304,12 +295,13 @@ header * {
   background-color: var(--footer-background-color);
 }
 .footer-links {
-  padding-top: 45px;
+  padding-top: 48px;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   display: flex;
   flex-direction: row;
+  align-items: baseline;
   padding-bottom: 28px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -322,7 +314,7 @@ header * {
   font-size: 14px;
   line-height: 24px;
 }
-address {
+.address {
   font-style: normal;
   display: flex;
   flex-direction: column;
@@ -356,23 +348,25 @@ address {
 }
 .social-link-footer {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 206px;
   padding-left: 0px;
+  list-style: none;
 }
 .link-element + .link-element {
   margin-left: 10px;
 }
-.social-link-footer > li {
-  display: block;
-}
-.second-footer-section .social-network {
-  display: block;
+
+.link-element .social-network {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-footer > li + .social-link-footer > li {
   margin-left: 10px;
@@ -381,16 +375,7 @@ address {
 .social-network:focus {
   background-color: var(--accent-color);
 }
-
-.social-network .icon {
-  width: 20px;
-  height: 20px;
-  margin: 12px;
-}
 .link-element .icon {
-  fill: var(--primary-background-color);
-}
-.link-element:hover .icon {
   fill: var(--primary-background-color);
 }
 .second-footer-section {
@@ -437,5 +422,4 @@ address {
 .mail:visited:focus {
   color: var(--accent-color);
 } */
-/* Footer */
 /* Footer */
