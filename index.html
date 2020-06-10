@@ -15,13 +15,13 @@
     <title>Studio</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav>
         <div class="nav">
           <a href="./index.html" class="main-link">
             Web <span class="first-logo">Studio</span>
           </a>
-          <ul>
+          <ul class="navigation-list">
             <li class="site-link">
               <a href="./index.html" class="link" id="current-page">
                 Студия
@@ -49,7 +49,7 @@
             </li>
             <li class="mail-item">
               <a href="tel:+380961111111" class="mail">
-                <svg class="icon" width="16" height="12">
+                <svg class="icon" width="10" height="14">
                   <use href="./image/sprite.svg#smartphone"></use>
                 </svg>
                 +38 096 111 11 11
@@ -63,7 +63,7 @@
       <!-- Hero! -->
       <section>
         <div class="hero">
-          <h1>
+          <h1 class="hero-header">
             эффективные решения для вашего бизнеса
           </h1>
           <a href="" class="pseudo-button">
@@ -120,20 +120,18 @@
         <div class="borders">
           <h2 class="section-header">Чем мы занимаемся</h2>
           <div class="container">
-            <div>
+            <div class="occupation">
               <img
                 src="./image/desktop-app.jpg"
                 alt="Десктопные приложения"
                 class="occupation-type"
                 width="370px"
               />
-              <div class="occupation">
-                <a href="" class="work">
-                  <h3 class="work-type">
-                    Десктопные приложения
-                  </h3>
-                </a>
-              </div>
+              <a href="" class="work">
+                <h3 class="work-type">
+                  Десктопные приложения
+                </h3>
+              </a>
             </div>
             <div class="occupation">
               <img
@@ -170,7 +168,11 @@
           <h2 class="section-header">Наша команда</h2>
           <div class="container">
             <div class="card">
-              <img src="./image/product-designer.jpg" alt="Дизайнер" />
+              <img
+                src="./image/product-designer.jpg"
+                alt="Дизайнер"
+                class="card-image"
+              />
               <div class="inform">
                 <h3 class="person">
                   John Smith
@@ -214,6 +216,7 @@
               <img
                 src="./image/front-end-developer.jpg"
                 alt="Фронт-энд разработчик"
+                class="card-image"
               />
               <div class="inform">
                 <h3 class="person">
@@ -255,7 +258,11 @@
               </div>
             </div>
             <div class="card">
-              <img src="./image/marketing.jpg" alt="Маркетолог" />
+              <img
+                src="./image/marketing.jpg"
+                alt="Маркетолог"
+                class="card-image"
+              />
               <div class="inform">
                 <h3 class="person">
                   Robert Jakis
@@ -296,7 +303,11 @@
               </div>
             </div>
             <div class="card">
-              <img src="./image/ui-designer.jpg" alt="Дизайнер интерфейса" />
+              <img
+                src="./image/ui-designer.jpg"
+                alt="Дизайнер интерфейса"
+                class="card-image"
+              />
               <div class="inform">
                 <h3 class="person">
                   Martin Doe
@@ -393,7 +404,7 @@
     <footer class="footer">
       <div class="borders">
         <div class="footer-links">
-          <address>
+          <address class="address">
             <a href="./index.html" class="main-link-second">
               Web <span class="second-logo">Studio</span>
             </a>
