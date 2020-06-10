@@ -33,20 +33,11 @@ body {
   tab-size: 4px;
   display: block;
 }
-div {
-  display: block;
-}
-section {
-  margin-left: auto;
-  margin-right: auto;
-}
-svg {
-  margin: auto;
-  border: none;
-}
 .icon {
   display: inline;
   fill: var(--description-text-color);
+  margin: auto;
+  border: none;
 }
 .container {
   display: flex;
@@ -66,13 +57,13 @@ svg {
   font-weight: bold;
   font-size: 36px;
   line-height: 1.16;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 /* Navigation */
-header {
+.header {
   border-bottom: 1px solid #ececec;
 }
-header * {
+.header * {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav {
@@ -84,15 +75,22 @@ header * {
   margin-right: auto;
   width: 1200px;
 }
-.nav ul {
+.navigation-list {
   display: flex;
   align-items: center;
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0px;
+  list-style: none;
 }
-.nav li {
-  display: block;
+.mail-list {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  list-style: none;
 }
 .main-link {
   font-family: Raleway;
@@ -159,7 +157,6 @@ header * {
   display: flex;
   align-items: flex-end;
 }
-
 .mail .icon {
   margin-right: 10px;
   fill: var(--description-text-color);
@@ -172,12 +169,8 @@ header * {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-
 .mail-item + .mail-item {
   margin-left: 50px;
-}
-.mail-list {
-  margin-left: auto;
 }
 /* Navigation end */
 
@@ -202,11 +195,10 @@ header * {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 94px;
   margin-left: auto;
   margin-right: auto;
 }
-h1 {
+.hero-header {
   color: var(--secondary-text-color);
   font-weight: 900;
   font-size: 44px;
@@ -215,6 +207,7 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   margin: 0px;
+  margin-bottom: 30px;
   width: 696px;
   letter-spacing: 0.06em;
 }
@@ -237,9 +230,12 @@ h1 {
 /* Hero end */
 /* Advantages */
 .advantage {
+  padding-top: 94px;
   padding-bottom: 94px;
   border-bottom: 1px solid #ececec;
   width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .feature::before {
   display: block;
@@ -337,33 +333,34 @@ h1 {
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
 }
-.card > img {
+.card-image {
+  margin-bottom: 30px;
   display: block;
   width: 270px;
 }
-
 .person {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
-
+.person-work {
+  color: var(--description-text-color);
+  font-size: 16px;
+  line-height: 19px;
+}
 .social-link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 270px;
   padding: 16px 32px 24px 32px;
+  list-style: none;
 }
-.social-link > li {
-  display: block;
-}
-
 .social-link .social-network {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -373,7 +370,6 @@ h1 {
 .social-network .icon {
   width: 20px;
   height: 20px;
-  margin: 12px;
   fill: var(--icon-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -456,7 +452,7 @@ h1 {
   font-size: 14px;
   line-height: 24px;
 }
-address {
+.address {
   font-style: normal;
   display: flex;
   flex-direction: column;
@@ -490,23 +486,25 @@ address {
 }
 .social-link-footer {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 206px;
   padding-left: 0px;
+  list-style: none;
 }
 .link-element + .link-element {
   margin-left: 10px;
 }
-.social-link-footer > li {
-  display: block;
-}
-.second-footer-section .social-network {
-  display: block;
+
+.link-element .social-network {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link-footer > li + .social-link-footer > li {
   margin-left: 10px;
